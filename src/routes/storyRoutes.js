@@ -12,4 +12,7 @@ router.delete('/deleteStory/:id',authMiddleware,storyController.deleteStory)
 
 // CHAPTER ROUTES
 router.post('/chapter',authMiddleware,chapterController.createChapter);
+router.get('/storychapter/:id',authMiddleware,chapterController.getChaptterForStories);
+router.put('/chapterupdate/:id',authMiddleware,chapterController.updateChapter);
+router.delete('/delete/:id',authMiddleware,chapterController.deleteChapter);
 module.exports=router
